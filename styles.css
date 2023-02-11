@@ -1,0 +1,124 @@
+  :root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--backgrond);
+    color: var(--text-color);
+  }
+
+  body, input, textarea, button {
+    font: 400 1rem 'manrope', sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .section {
+    padding: 1rem 3rem;
+  }
+
+  #header {
+     width: auto;
+     padding: 1rem ;
+     justify-content: space-between;
+     border: 1px solid var(--border);
+  }
+
+  #header button {
+   background-color: var(--backgrond);
+  }
+
+
+ #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+ }
+
+ #homeTitle {
+    padding: 2rem 0;
+    text-align: center;
+    line-height: 2.5rem;
+ }
+
+ #getCoffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ }
+
+ #getCoffee button {
+ 
+    width: 10rem;
+    height: 2rem;
+    background: var(--backgrond);
+    border: 1px solid var(--button);
+    border-radius: 6px;
+    color: var(--text-color);
+    
+    font-style: normal;
+    font-weight: 800;
+    font-size: 11px;
+    
+ }
+
+ .container {
+ 
+ }
+
+ #greatCoffee {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  
+
+ }
+
+ #greatCode {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--backgrond);
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+ }
+
+ #imgCoffee{
+
+    display: flex;
+    justify-content: center;
+ }
+
+ imgCoffee::before {
+    background-image: url(assets/blur-mobile.png);
+ }
+
+ #imgCoffee img {
+    width: 34rem;
+    height: 15rem;
+ }
