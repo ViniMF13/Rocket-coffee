@@ -35,20 +35,90 @@
     display: flex;
   }
 
+  .grid {
+   display: grid;
+  }
+
   .section {
     padding: 1rem 3rem;
   }
+
+  .list {
+   list-style: none;
+  }
+
+  /* HEADER */
 
   #header {
      width: auto;
      padding: 1rem ;
      justify-content: space-between;
+     align-items: center;
      border: 1px solid var(--border);
   }
 
-  #header button {
-   background-color: var(--backgrond);
+
+  #menu {
+   opacity: 0;
+   visibility: hidden;
+   font-size: 1px;
+
   }
+
+  #menuHeader {
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   padding: 2rem;
+  }
+
+
+
+  #openClose {
+   background-color: var(--backgrond);
+   cursor: pointer;
+  }
+
+  .openClose{
+   cursor: pointer;
+  }
+
+   header.show #menu {
+   position: relative;
+   opacity: 1;
+   visibility: visible;
+   background: var(--backgrond);
+   color: var(--text-color);
+   height: 100vh;
+   width: 100%;
+   
+   position: fixed;
+   top: 0;
+   left: 0;
+  }
+
+  header.show  #menuHeader {
+   position: relative;
+  }
+
+  header.show #menu .list {
+   font-size: 1.5rem;
+   width: 100vw;
+   padding: 2rem;
+   color: var(--text-color-menu-mobile);
+   border-top: 1px solid var(--border-menu-mobile);
+   border-bottom: 1px solid var(--border-menu-mobile);
+   cursor: pointer;
+
+  } 
+
+  header.show #menu .list:hover {
+   color: var(--text-color);
+   font-weight: 700;
+   border-left: 4px solid var(--button);
+  }
+
+  /* HOME */
 
 
  #home {
@@ -56,6 +126,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
+    padding-bottom: 0;
+    background-image: url(assets/blur-1.png);
+    background-size: cover
+    ;
  }
 
  #homeTitle {
@@ -72,22 +146,30 @@
  }
 
  #getCoffee button {
- 
     width: 10rem;
     height: 2rem;
     background: var(--backgrond);
     border: 1px solid var(--button);
     border-radius: 6px;
     color: var(--text-color);
+
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
     
-    font-style: normal;
     font-weight: 800;
     font-size: 11px;
-    
+
+    transition: 0.2s;
+ }
+
+ #getCoffee button:hover {
+   background: var(--button);
  }
 
  .container {
- 
+   background-image: url(assets/blur-1.png);
  }
 
  #greatCoffee {
@@ -114,11 +196,16 @@
     justify-content: center;
  }
 
- imgCoffee::before {
-    background-image: url(assets/blur-mobile.png);
+ 
+ #imgCoffee img {
+   width: -webkit-fill-available;
  }
 
- #imgCoffee img {
-    width: 34rem;
-    height: 15rem;
- }
+  /* WEB VERSION */
+
+  @media(min-width: 720px){
+   
+   #header {
+      display:flex;
+   }
+  }

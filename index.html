@@ -13,7 +13,24 @@
 <body>
     <header id="header" class="flex">
         <img src="assets/logo-mobile.svg" alt="logo">
-        <button id="openClose"><img src="assets/menu-buguer-open.svg" alt="open menu"></button>
+
+        <div id="menu">
+            <div id="menuHeader">
+                <img src="assets/logo-mobile.svg" alt="logo">
+                <div class="openClose Close"><img src="assets/menu-buguer-close.svg"></div>
+            </div>
+            
+
+            <ul class="ul grid">
+                <li class="list"><a href="#home">Home</a></li>
+                <li class="list"><a href="#home">Menu</a></li>
+                <li class="list"><a href="#home">Recompensas</a></li>
+                <li class="list"><a href="#home">Gift Cards</a></li>
+                <li class="list"><a href="#home">Lojas</a></li>                
+            </ul>
+        </div>
+
+        <div class="openClose open"><img src="assets/menu-buguer-open.svg" alt="open menu"></div> 
     </header>
 
     <section id="home" class="section">
@@ -25,7 +42,7 @@
         </div>
         
         <div id="getCoffee">
-            <button>PEGAR MEU CAFÉ ></button>
+            <button>PEGAR MEU CAFÉ <img src="assets/arrow.svg"></button>
         </div>
             
        <div class="container">
@@ -37,10 +54,8 @@
         <img src="assets/rocket-coffee.png" alt="">
        </div>
 
-        
-            
-        
-        
     </section>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
