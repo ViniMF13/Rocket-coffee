@@ -1,17 +1,19 @@
-  :root {
-    --backgrond: #000;
-    --text-color: #FFF;
-    --button: #8257E5;
-    --border: #29292E;
-    --border-menu-mobile: #A8A8B3;
-    --text-color-menu-mobile: #E1E1E6;
-  }
-
+  /* RESET */
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+  
+  /* BASE */
+  :root {
+   --backgrond: #000;
+   --text-color: #FFF;
+   --button: #8257E5;
+   --border: #29292E;
+   --border-menu-mobile: #A8A8B3;
+   --text-color-menu-mobile: #E1E1E6;
+ }
 
   body {
     background: var(--backgrond);
@@ -58,11 +60,22 @@
   }
 
 
+  #webLogo {
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+  }
+
   #menu {
    opacity: 0;
    visibility: hidden;
    font-size: 1px;
+  }
 
+  #menuButton {
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
   }
 
   #menuHeader {
@@ -71,8 +84,6 @@
    justify-content: space-between;
    padding: 2rem;
   }
-
-
 
   #openClose {
    background-color: var(--backgrond);
@@ -138,14 +149,14 @@
     line-height: 2.5rem;
  }
 
- #getCoffee {
+ .getCoffee {
     display: flex;
     align-items: center;
     justify-content: center;
 
  }
 
- #getCoffee button {
+ .getCoffee button {
     width: 10rem;
     height: 2rem;
     background: var(--backgrond);
@@ -164,7 +175,7 @@
     transition: 0.2s;
  }
 
- #getCoffee button:hover {
+ .getCoffee button:hover {
    background: var(--button);
  }
 
@@ -201,11 +212,71 @@
    width: -webkit-fill-available;
  }
 
-  /* WEB VERSION */
+  /* DESKTOP VERSION */
 
-  @media(min-width: 720px){
+  @media(min-width: 920px){
    
-   #header {
-      display:flex;
+   #webLogo {
+      opacity: 1;
+      visibility:visible;
+      position: relative;
+     }
+
+   #mobLogo {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
    }
+     
+   #header {
+      padding: 1rem 8rem;
+      border: 0;
+   }
+
+   #menuHeader {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+   }
+   
+   .openClose {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   #menu {
+      opacity: 1;
+      visibility: visible;  
+      font-size: 1rem;
+     }
+
+     #menuButton {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+     }
+   
+
+   #menu ul {
+      display: flex;
+      gap: 1rem;
+   }
+
+   #homeButton {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+     }
+
+     #homeTitle {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+ }
+ 
+  #greatCode, #greatCoffee {
+     font-size: 4rem;
+  }
+
   }

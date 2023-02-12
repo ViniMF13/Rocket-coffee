@@ -8,8 +8,15 @@ for (const element of openClose) {
         header.classList.toggle('show')
     })
 }
+ 
+// close menu when clock on a list item 
 
+const list = document.querySelectorAll('.list')
 
-
+for (const li of list){
+    li.addEventListener('click', function () {
+        header.classList.remove('show')
+    })
+}
 
 
