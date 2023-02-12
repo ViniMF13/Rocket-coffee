@@ -179,10 +179,6 @@
    background: var(--button);
  }
 
- .container {
-   background-image: url(assets/blur-1.png);
- }
-
  #greatCoffee {
   text-align: center;
   font-size: 2rem;
@@ -202,7 +198,6 @@
  }
 
  #imgCoffee{
-
     display: flex;
     justify-content: center;
  }
@@ -216,6 +211,15 @@
 
   @media(min-width: 920px){
    
+   #home {
+      height: 100vh;
+      background-size: cover;
+   }
+
+   #imgCoffee img {
+      width: auto;
+    }
+
    #webLogo {
       opacity: 1;
       visibility:visible;
@@ -269,7 +273,7 @@
       position: absolute;
      }
 
-     #homeTitle {
+   #homeTitle {
       opacity: 0;
       visibility: hidden;
       position: absolute;
